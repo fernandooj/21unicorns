@@ -1,0 +1,104 @@
+import { Dimensions, Platform} from 'react-native';
+import { MediaQueryStyleSheet } from "react-native-responsive";
+
+const size = Dimensions.get('window');
+export const style = MediaQueryStyleSheet.create({
+    contenedor:{
+        flex:1,
+        width:"100%",
+        alignItems:"center",
+        textAlign:"center",
+        justifyContent:"center",
+    },
+    mainImage:{
+        width:size.width,
+        height:size.height/2,
+        borderRadius:7,
+    },
+    image:{
+        width:size.width/4.5,
+        height:90,
+        borderRadius:10,
+        margin:5
+    },
+    imageIos:{
+        width:size.width/4.5,
+        height:90,
+        borderRadius:10,
+        margin:5,
+        resizeMode:"cover"
+    },
+    containGallery:{
+        flex:1,
+    },
+    subContainGallery:{
+        flex:1,
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        alignItems:"center",
+        textAlign:"center",
+       
+    },
+    btnImage:{
+        position:"relative"
+    },
+    selected:{
+        backgroundColor:"rgba(0,0,0,.05)",
+        borderColor:"#fea0a8",
+        borderWidth:1,
+        position:"absolute",
+        top:0,
+        left:0,
+        margin:5,
+        borderRadius:10,
+        width:size.width/4.5,
+        height:90,
+        zIndex:100
+    },
+    btn:{
+        position:"absolute",
+        bottom:10,
+        backgroundColor:"rgba(0,0,0,.4)",
+        borderRadius:40,
+        padding:10
+    },
+    btnMultiple:{
+        position:"absolute",
+        bottom:10,
+        borderRadius:40,
+        padding:10,
+        right:10
+    },
+    imgBotonSelect:{
+        width:20,
+        height:20
+    },
+    selectedMultiple:{
+        position:"absolute",
+        alignItems:"center",
+        justifyContent:"center",
+        borderWidth:1,
+        borderColor:"#fff",
+        zIndex:100,
+        top:10,
+        right:10,
+        width:20,
+        height:20,
+        borderRadius:10
+    },
+    textSelectedMultiple:{
+        color:"white"
+    },
+    contenFolder:{
+        position:"absolute",
+        backgroundColor:"#fff",
+        padding:10,
+        zIndex:2000,
+        top:40
+    },
+    textFolder:{
+        borderBottomWidth:1,
+        borderColor:"rgba(0,0,0,.1)",
+        padding:5
+    }
+})
